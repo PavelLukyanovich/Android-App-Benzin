@@ -17,6 +17,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     TextView selectDateText;
+    Button refill;
 //    EditText selectDate;
     DatePickerDialog.OnDateSetListener setListener;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         selectDateText = findViewById(R.id.selectDateText);
+        refill = findViewById(R.id.refillButton);
 //        selectDate = findViewById(R.id.selectDate);
 
         Calendar calendar = Calendar.getInstance();
@@ -66,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //
 //        });
+    }
+
+    public void refill(View view) {
+        
     }
 }
 
