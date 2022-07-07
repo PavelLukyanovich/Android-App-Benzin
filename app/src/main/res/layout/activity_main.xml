@@ -29,12 +29,39 @@
             tools:layout_editor_absoluteX="120dp"
             tools:layout_editor_absoluteY="64dp" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/costFuelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Стоимость топлива BYN:"
+            android:textSize="20sp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/costFuel"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:shadowColor="#2F4F4F"
+            android:textAlignment="center"
+            android:onClick="fillCostFuel">
+        </EditText>
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/liter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal">
 
         <TextView
@@ -56,7 +83,8 @@
             android:text="@string/button_decrement_name"
             android:textColor="#2F4F4F"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:onClick="decrementLiter"/>
 
         <TextView
             android:id="@+id/literCounter"
@@ -77,7 +105,8 @@
             android:textAlignment="gravity"
             android:textColor="#2F4F4F"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:onClick="incrementLiter"/>
 
     </LinearLayout>
 
@@ -107,7 +136,8 @@
             android:text="@string/button_decrement_name"
             android:textColor="#2F4F4F"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:onClick="decrementCurrency"/>
 
         <TextView
             android:id="@+id/currencyCounter"
@@ -128,7 +158,8 @@
             android:textAlignment="gravity"
             android:textColor="#2F4F4F"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:onClick="incrementCurrency"/>
 
     </LinearLayout>
     <TextView
@@ -167,7 +198,6 @@
           android:layout_marginTop="80dp"
           android:text="З А П Р А В И Т Ь"
           android:onClick="refill">
-
       </Button>
 
     </LinearLayout>
